@@ -80,6 +80,10 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 		case ID_OPERATIONS_CLEARLOBBY:
 			GameLobby.ClearLobby();
 			break;
+			
+		case ID_ABOUT_ABOUTTHISPROGRAM:
+			MessageBox(NULL, L"A simple Game Lobby simulator using a dynamically allocated singly Linked List. (c) Rony Hanna 2017.", L"About This Program", MB_OK | MB_ICONINFORMATION);
+			break;
 
 		default:
 			break;
@@ -116,7 +120,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 
 	case WM_CLOSE:
 	{
-		if (MessageBox(hwnd, L"Did you really want to exit?", L"Game Lobby Simulation with Linked List", MB_OKCANCEL | MB_ICONQUESTION) == IDOK)
+		if (MessageBox(hwnd, L"Did you really want to exit?", L"Game Lobby Simulation with Linked List", MB_YESNO | MB_ICONQUESTION) == IDYES)
 			DestroyWindow(hwnd);
 
 		return 0;
