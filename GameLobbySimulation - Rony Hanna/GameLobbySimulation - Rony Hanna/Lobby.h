@@ -34,10 +34,9 @@ public:
 	void RenderPlayer(const int, const int, HDC);
 	void AddPlayerVector(const Vector2D& aPlayer) { m_PlayerVec.push_back(aPlayer); };
 	void GetMouseCoord(double, double);
-
-private:
 	void DisplayText(HDC);
 
+private:
 	double m_MouseX, m_MouseY;
 	Player* m_pHead;
 	bool m_bKickFirstPlayer;

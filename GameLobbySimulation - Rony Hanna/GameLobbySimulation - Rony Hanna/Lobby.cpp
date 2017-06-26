@@ -3,7 +3,7 @@
 
 // --------------------------------------
 // Author: Rony Hanna
-// Description: Function that adds a player to the back of the list
+// Description: Function that adds dynamically allocates a player node and adds it to the back of the list
 // --------------------------------------
 void Lobby::AddPlayer()
 {
@@ -35,8 +35,7 @@ void Lobby::KickPlayer()
 	else
 	{
 		Player* pTemp = m_pHead;
-		m_pHead = m_pHead->GetNextPlayer();
-		
+		m_pHead = m_pHead->GetNextPlayer();		
 		delete pTemp;
 		pTemp = nullptr;
 
@@ -51,7 +50,13 @@ void Lobby::KickPlayer()
 void Lobby::ClearLobby()
 {
 	while (m_pHead != nullptr)
-		KickPlayer();
+	{
+		Player* pTemp = m_pHead;
+		m_pHead = m_pHead->GetNextPlayer();
+		delete pTemp;
+		pTemp = nullptr;
+		m_PlayerVec.erase(m_PlayerVec.begin());
+	}
 
 	return;
 }
@@ -63,7 +68,10 @@ void Lobby::ClearLobby()
 void Lobby::RenderPlayer(const int X, const int Y, HDC BackbufferDC)
 {
 	if (m_pHead == nullptr)
+	{
+		DisplayText(BackbufferDC);
 		return;
+	}
 	else
 	{
 		Player* pIter = m_pHead;
@@ -83,8 +91,10 @@ void Lobby::RenderPlayer(const int X, const int Y, HDC BackbufferDC)
 			int top = 70;
 			int bottom = 10;
 			
+			// Check if first player is to be kicked
 			if (m_bKickFirstPlayer)
 			{
+				// If so erase from the vector
 				m_PlayerVec.erase(m_PlayerVec.begin());
 				m_bKickFirstPlayer = false;
 			}
@@ -140,4 +150,8 @@ void Lobby::DisplayText(HDC BackbufferDC)
 		std::string Text = "Player " + ToString(i);
 		TextOutA(BackbufferDC, m_PlayerVec[i].m_X, m_PlayerVec[i].m_Y, Text.c_str(), Text.size());
 	}
+
+	std::string NumOfPlayerTextLabel = "Number Of Players: " + ToString(m_PlayerVec.size());
+
+	TextOutA(BackbufferDC, 5, 500, NumOfPlayerTextLabel.c_str(), NumOfPlayerTextLabel.size());
 }

@@ -1,0 +1,10 @@
+﻿  Lobby.cpp
+c:\users\rony hanna\desktop\gamelobbysimulator-dynamically-allocated-linked-list\gamelobbysimulation - rony hanna\gamelobbysimulation - rony hanna\lobby.cpp(105): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\rony hanna\desktop\gamelobbysimulator-dynamically-allocated-linked-list\gamelobbysimulation - rony hanna\gamelobbysimulation - rony hanna\lobby.cpp(115): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\rony hanna\desktop\gamelobbysimulator-dynamically-allocated-linked-list\gamelobbysimulation - rony hanna\gamelobbysimulation - rony hanna\lobby.cpp(116): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\rony hanna\desktop\gamelobbysimulator-dynamically-allocated-linked-list\gamelobbysimulation - rony hanna\gamelobbysimulation - rony hanna\lobby.cpp(117): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\rony hanna\desktop\gamelobbysimulator-dynamically-allocated-linked-list\gamelobbysimulation - rony hanna\gamelobbysimulation - rony hanna\lobby.cpp(151): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+c:\users\rony hanna\desktop\gamelobbysimulator-dynamically-allocated-linked-list\gamelobbysimulation - rony hanna\gamelobbysimulation - rony hanna\lobby.cpp(151): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\rony hanna\desktop\gamelobbysimulator-dynamically-allocated-linked-list\gamelobbysimulation - rony hanna\gamelobbysimulation - rony hanna\lobby.cpp(156): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  GameLobbySimulation - Rony Hanna.vcxproj -> C:\Users\Rony Hanna\Desktop\GameLobbySimulator-Dynamically-Allocated-Linked-List\GameLobbySimulation - Rony Hanna\x64\Debug\GameLobbySimulation - Rony Hanna.exe
+  GameLobbySimulation - Rony Hanna.vcxproj -> C:\Users\Rony Hanna\Desktop\GameLobbySimulator-Dynamically-Allocated-Linked-List\GameLobbySimulation - Rony Hanna\x64\Debug\GameLobbySimulation - Rony Hanna.pdb (Full PDB)
